@@ -318,6 +318,8 @@ button, input, textarea { font: inherit; }
   padding-top: 6px; letter-spacing: 0.06em;
 }
 .plates figure:first-child img { height: 280px; }
+.plates.outside { grid-template-columns: 1fr 1fr; }
+.plates.outside img, .plates.outside figure:first-child img { height: 340px; }
 
 .video-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
@@ -382,7 +384,7 @@ input:focus, textarea:focus { outline: 2px solid var(--gold); border-color: tran
   .page.left { border-right: 0; border-bottom: 1px solid rgba(232, 197, 106, 0.22); }
   .page.plate img, .page.plate .map { min-height: 240px; height: 240px; }
   .plates, .video-grid { grid-template-columns: 1fr 1fr; }
-  .plates figure:first-child img, .plates img { height: 180px; }
+  .plates figure:first-child img, .plates img, .plates.outside img, .plates.outside figure:first-child img { height: 180px; }
   .running { display: none; }
   .leaf { transform-origin: center left; }
 }
