@@ -65,6 +65,8 @@
   </nav>
 
   <div class="stage">
+    <canvas id="dust"></canvas>
+    <div class="glow"></div>
     <div class="book" id="book">
 
       <section class="leaf cover" data-leaf="0">
@@ -78,6 +80,7 @@
           <p class="cover-meta">Sondag 09:00 · Afrikaans · Vergesig</p>
           <button class="btn btn-gold" type="button" id="openBtn" data-i18n="openBtn">Maak die boek oop</button>
         </div>
+        <span class="hint" aria-hidden="true"></span>
       </section>
 
       <section class="leaf spread" data-leaf="1" id="woord">
@@ -350,14 +353,51 @@
       drawPager();
     }
 
+    const leaves = [...document.querySelectorAll(".leaf")];
     function go(n) {
       page = Math.max(0, Math.min(PAGES - 1, n));
-      book.style.transform = "translateX(" + (-page * 100) + "%)";
+      leaves.forEach((el, i) => {
+        el.classList.toggle("flipped", i < page);
+        el.style.zIndex = String(i < page ? i : PAGES - i);
+        el.setAttribute("aria-hidden", i === page ? "false" : "true");
+      });
       drawPager();
       toc.setAttribute("hidden", "");
-      const leaf = document.querySelector('.leaf[data-leaf="' + page + '"]');
+      const leaf = leaves[page];
       if (leaf) leaf.scrollTop = 0;
     }
+
+    (function dust() {
+      const c = document.getElementById("dust");
+      const ctx = c.getContext("2d");
+      let w, h, bits;
+      function resize() {
+        w = c.width = c.offsetWidth * 2;
+        h = c.height = c.offsetHeight * 2;
+        bits = Array.from({ length: 70 }, () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 1.8 + 0.4,
+          s: Math.random() * 0.35 + 0.08,
+          a: Math.random() * 0.45 + 0.1
+        }));
+      }
+      function tick() {
+        ctx.clearRect(0, 0, w, h);
+        bits.forEach((b) => {
+          b.y -= b.s;
+          if (b.y < 0) { b.y = h; b.x = Math.random() * w; }
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(228,195,106," + b.a + ")";
+          ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        requestAnimationFrame(tick);
+      }
+      window.addEventListener("resize", resize);
+      resize();
+      tick();
+    })();
 
     function drawPager() {
       folio.textContent = String(page + 1);
@@ -421,7 +461,7 @@
       }
     });
 
-    drawPager();
+    go(0);
   </script>
 </body>
 </html>
