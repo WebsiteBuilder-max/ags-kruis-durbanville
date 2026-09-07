@@ -209,6 +209,21 @@ blockquote cite {
 
 .split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items: start; }
 .map { width: 100%; height: 380px; border: 0; border-radius: 18px; }
+.time-card {
+  margin-top: 32px; max-width: 360px;
+  background: var(--navy); color: #fff;
+  border-radius: 20px; padding: 28px 28px 26px;
+  box-shadow: var(--shadow);
+}
+.time-day {
+  letter-spacing: 0.18em; text-transform: uppercase;
+  font-size: 0.74rem; color: var(--gold-2); font-weight: 500;
+}
+.time-clock {
+  font-family: var(--serif); font-size: clamp(3rem, 6vw, 4.2rem);
+  line-height: 1; margin: 8px 0 10px; font-weight: 500;
+}
+.time-note { color: #c5d2df; font-size: 0.95rem; }
 .facts { list-style: none; margin-top: 20px; color: var(--navy); }
 .facts li { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .facts a { color: var(--navy); }
