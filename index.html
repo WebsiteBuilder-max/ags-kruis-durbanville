@@ -4,109 +4,244 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AGS Kruis Gemeente Durbanville</title>
-  <meta name="description" content="AGS Kruis Gemeente Durbanville — ’n Pinksterkerk op die hoek van St John- en van Bredastraat, Vergesig. Almal is welkom." />
+  <meta name="description" content="AGS Kruis Gemeente Durbanville — ’n Pinksterkerk van die Apostoliese Geloofsending op die hoek van St John- en van Bredastraat, Vergesig. Almal is welkom." />
+  <meta name="theme-color" content="#0a2744" />
   <link rel="icon" href="images/logo.png" />
+  <link rel="canonical" href="https://ags-kruis-durbanville.pages.dev/" />
+  <meta property="og:title" content="AGS Kruis Gemeente Durbanville" />
+  <meta property="og:description" content="’n Pinksterkerk in Vergesig. Kom soos jy is." />
+  <meta property="og:image" content="images/hero.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "AGS Kruis Gemeente Durbanville",
+    "alternateName": "AFM Kruis Gemeente Durbanville",
+    "url": "https://ags-kruis-durbanville.pages.dev/",
+    "email": "admin@agsdurbanville.co.za",
+    "telephone": "+27839668164",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "St John Road, corner van Breda Street",
+      "addressLocality": "Vergesig, Durbanville",
+      "postalCode": "7550",
+      "addressCountry": "ZA"
+    },
+    "sameAs": [
+      "https://www.facebook.com/people/AGS-Kruis-Gemeente-Durbanville/100066988639231/",
+      "https://www.youtube.com/channel/UCv0995lVLH5oTTXfvRLM90w"
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip" href="#top">Slaan oor na inhoud</a>
+
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top">
-        <img src="images/logo.png" alt="AGS logo" />
-        <span>AGS Kruis Gemeente<small>Durbanville</small></span>
+        <img src="images/logo.png" width="52" height="52" alt="AGS-logo" />
+        <span>AGS Kruis Gemeente<small>Durbanville · Vergesig</small></span>
       </a>
-      <nav class="nav-links">
-        <a href="#welkom">Welkom</a>
-        <a href="#dienste">Dienste</a>
-        <a href="#hier">Hier is ons</a>
-        <a href="#kontak">Kontak</a>
+      <nav class="nav-links" aria-label="Hoofkieslys">
+        <a href="#welkom" data-i18n="navWelcome">Welkom</a>
+        <a href="#eerste" data-i18n="navFirst">Eerste keer</a>
+        <a href="#dienste" data-i18n="navSvc">Dienste</a>
+        <a href="#kyk" data-i18n="navWatch">Kyk saam</a>
+        <a href="#hier" data-i18n="navHere">Hier is ons</a>
+        <a href="#kontak" data-i18n="navContact">Kontak</a>
         <button class="lang-btn" type="button" data-lang>English</button>
       </nav>
-      <button class="menu-btn" type="button" id="menuBtn">Kieslys</button>
+      <a class="btn btn-gold nav-cta" href="https://wa.me/27839668164">WhatsApp</a>
+      <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Kieslys</button>
     </div>
-    <div class="mobile-menu wrap" id="mobileMenu">
-      <a href="#welkom">Welkom</a>
-      <a href="#dienste">Dienste</a>
-      <a href="#hier">Hier is ons</a>
-      <a href="#kontak">Kontak</a>
+    <div class="mobile-menu wrap" id="mobileMenu" hidden>
+      <a href="#welkom" data-i18n="navWelcome">Welkom</a>
+      <a href="#eerste" data-i18n="navFirst">Eerste keer</a>
+      <a href="#dienste" data-i18n="navSvc">Dienste</a>
+      <a href="#kyk" data-i18n="navWatch">Kyk saam</a>
+      <a href="#hier" data-i18n="navHere">Hier is ons</a>
+      <a href="#kontak" data-i18n="navContact">Kontak</a>
       <button class="lang-btn" type="button" data-lang>English</button>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <img class="hero-pic" src="images/church-inside.jpg" alt="Erediens in die saal" />
+      <img class="hero-pic" src="images/hero.jpg" alt="Aanbidding in die saal van AGS Kruis Gemeente Durbanville" />
+      <div class="hero-shade"></div>
       <div class="wrap hero-inner">
-        <p class="kicker" data-i18n="kicker">Apostoliese Geloofsending</p>
-        <h1 data-i18n="heroTitle">AGS Kruis Gemeente Durbanville</h1>
-        <p data-i18n="heroLede">’n Pinksterkerk in Vergesig. Kom soos jy is — ons sal bly wees om jou te sien.</p>
+        <p class="kicker" data-i18n="kicker">Apostoliese Geloofsending · Vergesig</p>
+        <h1 data-i18n="heroTitle">By die kruis. In Durbanville.</h1>
+        <p class="hero-lede" data-i18n="heroLede">’n Pinksterkerk op die hoek van St John- en van Bredastraat. Kom soos jy is — ons sal bly wees om jou te sien.</p>
         <div class="actions">
-          <a class="btn btn-gold" href="#kontak" data-i18n="ctaVisit">Kom kuier</a>
-          <a class="btn btn-ghost" href="https://wa.me/27839668164" data-i18n="ctaWa">WhatsApp</a>
+          <a class="btn btn-gold" href="#hier" data-i18n="ctaVisit">Kom kuier</a>
+          <a class="btn btn-ghost" href="https://wa.me/27839668164?text=Hallo%2C%20wanneer%20is%20die%20volgende%20erediens%3F" data-i18n="ctaWa">Vra die tyd</a>
         </div>
       </div>
     </section>
 
+    <section class="verse">
+      <div class="wrap verse-grid">
+        <img src="images/bible.jpg" alt="Oop Bybel en ’n houtkruis" />
+        <blockquote>
+          <p data-i18n="verse">“Julle sal krag ontvang wanneer die Heilige Gees oor julle kom, en julle sal my getuies wees.”</p>
+          <cite data-i18n="verseCite">Handelinge 1:8</cite>
+        </blockquote>
+      </div>
+    </section>
+
     <section class="wrap" id="welkom">
-      <p class="kicker" style="color:#c9a227" data-i18n="aboutKicker">Wie ons is</p>
-      <h2 class="section-title" data-i18n="aboutTitle">By die kruis. In Durbanville.</h2>
-      <p class="lede" data-i18n="aboutLede">Ons is AGS Kruis Gemeente Durbanville, deel van die Apostoliese Geloofsending van Suid-Afrika. Ons aanbid Jesus Christus, lees die Bybel, en maak plek vir gesinne, kinders en enigiemand wat soek.</p>
+      <p class="kicker kicker-gold" data-i18n="aboutKicker">Wie ons is</p>
+      <h2 class="section-title" data-i18n="aboutTitle">’n Familie by die kruis.</h2>
+      <p class="lede" data-i18n="aboutLede">Ons is AGS Kruis Gemeente Durbanville, deel van die Apostoliese Geloofsending van Suid-Afrika — die land se eerste en grootste Pinksterkerk. Ons aanbid Jesus Christus, lees die Bybel, en maak plek vir gesinne, kinders en enigiemand wat soek.</p>
       <div class="grid-3">
         <article class="card">
-          <h3 data-i18n="c1t">Sondag</h3>
-          <p data-i18n="c1p">Erediens in Afrikaans. Bel of WhatsApp vir die tyd — dit kan verander.</p>
+          <span class="card-mark" aria-hidden="true">01</span>
+          <h3 data-i18n="c1t">Aanbidding</h3>
+          <p data-i18n="c1p">Sondag kom ons bymekaar in Afrikaans. Daar is sang, die Woord, en ruimte om stil te wees voor die Here.</p>
         </article>
         <article class="card">
+          <span class="card-mark" aria-hidden="true">02</span>
           <h3 data-i18n="c2t">Almal welkom</h3>
           <p data-i18n="c2p">Jy hoef nie eers ’n lidmaat te wees nie. Stap in. Groet iemand. Bly so lank as jy wil.</p>
         </article>
         <article class="card">
-          <h3 data-i18n="c3t">Kyk saam</h3>
-          <p data-i18n="c3p">Daar is ’n YouTube-kanaal met boodskappe. Die kantoor is ook op Facebook.</p>
+          <span class="card-mark" aria-hidden="true">03</span>
+          <h3 data-i18n="c3t">Die Woord</h3>
+          <p data-i18n="c3p">Ons glo die Bybel is God se Woord, en dat die Heilige Gees vandag nog mense lei, genees en stuur.</p>
         </article>
       </div>
     </section>
 
+    <section class="gallery" aria-label="Fotos van die saal">
+      <div class="wrap gallery-grid">
+        <figure class="tall">
+          <img src="images/hall.jpg" alt="Die saal onder pers lig, met die aanbiddingspan op die verhoog" />
+        </figure>
+        <figure>
+          <img src="images/worship.jpg" alt="Aanbidding met kitaar en sang in die saal" />
+        </figure>
+        <figure>
+          <img src="images/building.jpg" alt="Die kerkgebou agter die heining in Vergesig" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="band" id="eerste">
+      <div class="wrap">
+        <p class="kicker kicker-gold" data-i18n="firstKicker">Jou eerste Sondag</p>
+        <h2 class="section-title" data-i18n="firstTitle">Kom soos jy is.</h2>
+        <p class="lede" data-i18n="firstLede">Niemand verwag dat jy alles ken nie. Hier is wat jy kan verwag as dit jou eerste keer is.</p>
+        <ol class="steps">
+          <li>
+            <h3 data-i18n="s1t">Vind ons</h3>
+            <p data-i18n="s1p">Hoek van St John- en van Bredastraat, Vergesig. Daar is ’n heining voor die gebou. WhatsApp as jy hulp wil hê met parkeer.</p>
+          </li>
+          <li>
+            <h3 data-i18n="s2t">Stap in</h3>
+            <p data-i18n="s2p">Die diens is in Afrikaans. Dra wat jy gemaklik is. Kinders is welkom saam met jou.</p>
+          </li>
+          <li>
+            <h3 data-i18n="s3t">Bly of gaan</h3>
+            <p data-i18n="s3p">Groet iemand ná die tyd as jy wil. Of loop stil-stil uit. Jy is in elk geval welkom terug.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <section class="wrap" id="dienste">
-      <p class="kicker" style="color:#c9a227" data-i18n="svcKicker">Wanneer</p>
-      <h2 class="section-title" data-i18n="svcTitle">Kom ons praat eers oor die tyd.</h2>
-      <p class="lede" data-i18n="svcLede">Google wys soms Woensdag 09:00. Ou lyste noem Sondagoggend en -aand. Ons sit nie ’n verkeerde tyd op die web nie — stuur ’n WhatsApp, dan sê ons wanneer die volgende diens is.</p>
-      <div class="actions" style="margin-top:22px">
-        <a class="btn btn-gold" href="https://wa.me/27839668164?text=Hallo%2C%20wanneer%20is%20die%20volgende%20erediens%3F" style="color:#1a1408" data-i18n="svcBtn">Vra die tyd op WhatsApp</a>
+      <p class="kicker kicker-gold" data-i18n="svcKicker">Wanneer</p>
+      <h2 class="section-title" data-i18n="svcTitle">Vra eers die tyd. Dan kom ons.</h2>
+      <p class="lede" data-i18n="svcLede">Ou lyste noem Sondag 09:30 en 18:30 in Afrikaans. Google wys soms Woensdag 09:00. Ons sit nie ’n tyd op die web wat dalk verkeerd is nie — stuur ’n WhatsApp, dan sê ons wanneer die volgende diens is.</p>
+      <div class="actions" style="margin-top:28px">
+        <a class="btn btn-gold" href="https://wa.me/27839668164?text=Hallo%2C%20wanneer%20is%20die%20volgende%20erediens%3F" data-i18n="svcBtn">Vra die tyd op WhatsApp</a>
+        <a class="btn btn-navy" href="tel:+27839668164">083 966 8164</a>
+      </div>
+    </section>
+
+    <section class="band" id="kyk">
+      <div class="wrap">
+        <p class="kicker kicker-gold" data-i18n="ytKicker">YouTube</p>
+        <h2 class="section-title" data-i18n="ytTitle">Boodskappe om saam te kyk.</h2>
+        <p class="lede" data-i18n="ytLede">Hierdie is werklike preke van ons kanaal, Ags Durbanville Kruisgemeente. Hulle is van 2020 — nie hierdie Sondag se diens nie. Kyk gerus, en kom kuier as jy kan.</p>
+        <div class="video-grid">
+          <a class="video-card" href="https://www.youtube.com/watch?v=Jw4VmwFKWI0">
+            <img src="images/yt-Jw4VmwFKWI0.jpg" alt="" />
+            <span>
+              <strong>Dade</strong>
+              <em>Pastoor Danie Heyns</em>
+            </span>
+          </a>
+          <a class="video-card" href="https://www.youtube.com/watch?v=16uGJ0ubR9g">
+            <img src="images/yt-16uGJ0ubR9g.jpg" alt="" />
+            <span>
+              <strong>Dissipline</strong>
+              <em>Pastoor Danie Heyns</em>
+            </span>
+          </a>
+          <a class="video-card" href="https://www.youtube.com/watch?v=Q-NJMSSu9O4">
+            <img src="images/yt-Q-NJMSSu9O4.jpg" alt="" />
+            <span>
+              <strong>4 Desember 2020</strong>
+              <em>Dr Bronkhorst</em>
+            </span>
+          </a>
+          <a class="video-card" href="https://www.youtube.com/watch?v=KzCv0httYWg">
+            <img src="images/yt-KzCv0httYWg.jpg" alt="" />
+            <span>
+              <strong>Psalm 91:13</strong>
+              <em>Pastoor Andre Heyns</em>
+            </span>
+          </a>
+        </div>
+        <div class="actions" style="margin-top:28px">
+          <a class="btn btn-navy" href="https://www.youtube.com/channel/UCv0995lVLH5oTTXfvRLM90w" data-i18n="ytAll">Hele kanaal</a>
+        </div>
       </div>
     </section>
 
     <section class="wrap" id="hier">
       <div class="split">
         <div>
-          <p class="kicker" style="color:#c9a227" data-i18n="locKicker">Adres</p>
+          <p class="kicker kicker-gold" data-i18n="locKicker">Adres</p>
           <h2 class="section-title" data-i18n="locTitle">Hoek van St John- en van Bredastraat</h2>
-          <p class="lede" data-i18n="locLede">St John Road, Vergesig, Durbanville, 7550. Daar is ’n heining voor die gebou. As jy die eerste keer kom, WhatsApp gerus — iemand help jou graag met parkeer.</p>
-          <p style="margin-top:16px"><strong>083 966 8164</strong><br />
-            <a href="mailto:admin@agsdurbanville.co.za">admin@agsdurbanville.co.za</a></p>
-          <div class="actions" style="margin-top:18px">
-            <a class="btn btn-gold" href="https://maps.google.com/?q=AGS+Kruis+Gemeente+Durbanville+St+John+Rd" style="color:#1a1408" data-i18n="locMap">Maak Google Maps oop</a>
+          <p class="lede" data-i18n="locLede">St John Road, Vergesig, Durbanville, 7550. Aurora / Vergesig. As dit jou eerste keer is, WhatsApp gerus — iemand help jou graag met parkeer.</p>
+          <ul class="facts">
+            <li><strong>083 966 8164</strong></li>
+            <li><a href="mailto:admin@agsdurbanville.co.za">admin@agsdurbanville.co.za</a></li>
+            <li data-i18n="locAf">Erediens in Afrikaans</li>
+          </ul>
+          <div class="actions" style="margin-top:22px">
+            <a class="btn btn-gold" href="https://maps.google.com/?q=AGS+Kruis+Gemeente+Durbanville+St+John+Rd+Vergesig" data-i18n="locMap">Maak Google Maps oop</a>
           </div>
         </div>
-        <iframe class="map" title="Kaart" src="https://maps.google.com/maps?q=AGS%20Kruis%20Gemeente%20Durbanville%20St%20John%20Rd%20Vergesig&amp;z=16&amp;output=embed" loading="lazy"></iframe>
+        <iframe class="map" title="Kaart van AGS Kruis Gemeente Durbanville" src="https://maps.google.com/maps?q=AGS%20Kruis%20Gemeente%20Durbanville%20St%20John%20Rd%20Vergesig&amp;z=16&amp;output=embed" loading="lazy"></iframe>
       </div>
     </section>
 
     <section class="wrap" id="kontak">
       <div class="split">
         <div>
-          <p class="kicker" style="color:#c9a227" data-i18n="conKicker">Kontak</p>
+          <p class="kicker kicker-gold" data-i18n="conKicker">Kontak</p>
           <h2 class="section-title" data-i18n="conTitle">Stuur ’n boodskap.</h2>
-          <p class="lede" data-i18n="conLede">Dit gaan na admin@agsdurbanville.co.za. Of WhatsApp dieselfde nommer as die kerkfoon.</p>
+          <p class="lede" data-i18n="conLede">Dit gaan na admin@agsdurbanville.co.za. Of WhatsApp dieselfde nommer as die kerkfoon. Ons antwoord so gou as ons kan.</p>
+          <div class="actions" style="margin-top:22px">
+            <a class="btn btn-navy" href="https://wa.me/27839668164">WhatsApp 083 966 8164</a>
+          </div>
         </div>
         <form id="form">
           <label class="hp" aria-hidden="true">Maatskappy<input name="company" tabindex="-1" autocomplete="off" /></label>
-          <label data-i18n="fName">Naam<input name="name" required /></label>
-          <label>E-pos<input name="email" type="email" required /></label>
+          <label data-i18n="fName">Naam<input name="name" required autocomplete="name" /></label>
+          <label>E-pos<input name="email" type="email" required autocomplete="email" /></label>
           <label data-i18n="fMsg">Boodskap<textarea name="message" required></textarea></label>
           <button class="btn btn-gold" type="submit" data-i18n="fSend">Stuur</button>
-          <p class="success" id="sent"></p>
+          <p class="success" id="sent" role="status"></p>
         </form>
       </div>
     </section>
@@ -114,69 +249,100 @@
 
   <footer>
     <div class="wrap foot">
-      <div>
-        <strong>AGS Kruis Gemeente Durbanville</strong>
-        <p>Apostoliese Geloofsending · Vergesig</p>
+      <div class="foot-brand">
+        <img src="images/logo.png" width="48" height="48" alt="" />
+        <div>
+          <strong>AGS Kruis Gemeente Durbanville</strong>
+          <p data-i18n="footLine">Apostoliese Geloofsending van Suid-Afrika · Vergesig</p>
+        </div>
       </div>
-      <p>
+      <p class="foot-links">
         <a href="https://www.youtube.com/channel/UCv0995lVLH5oTTXfvRLM90w">YouTube</a>
-        ·
         <a href="https://www.facebook.com/people/AGS-Kruis-Gemeente-Durbanville/100066988639231/">Facebook</a>
+        <a href="https://afm-ags.org/">afm-ags.org</a>
       </p>
     </div>
   </footer>
 
+  <a class="wa-fab" href="https://wa.me/27839668164" aria-label="WhatsApp die kerk">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.32a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24m-2.73 4.3c-.17 0-.45.06-.68.31-.24.25-.9.88-.9 2.14s.92 2.48 1.04 2.65c.13.17 1.77 2.84 4.37 3.86 2.17.85 2.61.68 3.08.64.47-.04 1.52-.62 1.73-1.22.22-.6.22-1.11.15-1.22-.07-.11-.24-.17-.5-.3s-1.52-.75-1.76-.83c-.24-.09-.41-.13-.59.13-.17.25-.68.83-.83 1-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.07-1.28-.76-.68-1.28-1.52-1.43-1.77-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.25.26-.42.09-.17.04-.31-.02-.44-.07-.13-.58-1.42-.8-1.94-.21-.5-.42-.43-.59-.44z"/></svg>
+  </a>
+
   <script>
     const copy = {
       af: {
-        kicker: "Apostoliese Geloofsending",
-        heroTitle: "AGS Kruis Gemeente Durbanville",
-        heroLede: "’n Pinksterkerk in Vergesig. Kom soos jy is — ons sal bly wees om jou te sien.",
-        ctaVisit: "Kom kuier",
-        ctaWa: "WhatsApp",
+        navWelcome: "Welkom", navFirst: "Eerste keer", navSvc: "Dienste",
+        navWatch: "Kyk saam", navHere: "Hier is ons", navContact: "Kontak",
+        kicker: "Apostoliese Geloofsending · Vergesig",
+        heroTitle: "By die kruis. In Durbanville.",
+        heroLede: "’n Pinksterkerk op die hoek van St John- en van Bredastraat. Kom soos jy is — ons sal bly wees om jou te sien.",
+        ctaVisit: "Kom kuier", ctaWa: "Vra die tyd",
+        verse: "“Julle sal krag ontvang wanneer die Heilige Gees oor julle kom, en julle sal my getuies wees.”",
+        verseCite: "Handelinge 1:8",
         aboutKicker: "Wie ons is",
-        aboutTitle: "By die kruis. In Durbanville.",
-        aboutLede: "Ons is AGS Kruis Gemeente Durbanville, deel van die Apostoliese Geloofsending van Suid-Afrika. Ons aanbid Jesus Christus, lees die Bybel, en maak plek vir gesinne, kinders en enigiemand wat soek.",
-        c1t: "Sondag", c1p: "Erediens in Afrikaans. Bel of WhatsApp vir die tyd — dit kan verander.",
+        aboutTitle: "’n Familie by die kruis.",
+        aboutLede: "Ons is AGS Kruis Gemeente Durbanville, deel van die Apostoliese Geloofsending van Suid-Afrika — die land se eerste en grootste Pinksterkerk. Ons aanbid Jesus Christus, lees die Bybel, en maak plek vir gesinne, kinders en enigiemand wat soek.",
+        c1t: "Aanbidding", c1p: "Sondag kom ons bymekaar in Afrikaans. Daar is sang, die Woord, en ruimte om stil te wees voor die Here.",
         c2t: "Almal welkom", c2p: "Jy hoef nie eers ’n lidmaat te wees nie. Stap in. Groet iemand. Bly so lank as jy wil.",
-        c3t: "Kyk saam", c3p: "Daar is ’n YouTube-kanaal met boodskappe. Die kantoor is ook op Facebook.",
-        svcKicker: "Wanneer", svcTitle: "Kom ons praat eers oor die tyd.",
-        svcLede: "Google wys soms Woensdag 09:00. Ou lyste noem Sondagoggend en -aand. Ons sit nie ’n verkeerde tyd op die web nie — stuur ’n WhatsApp, dan sê ons wanneer die volgende diens is.",
+        c3t: "Die Woord", c3p: "Ons glo die Bybel is God se Woord, en dat die Heilige Gees vandag nog mense lei, genees en stuur.",
+        firstKicker: "Jou eerste Sondag", firstTitle: "Kom soos jy is.",
+        firstLede: "Niemand verwag dat jy alles ken nie. Hier is wat jy kan verwag as dit jou eerste keer is.",
+        s1t: "Vind ons", s1p: "Hoek van St John- en van Bredastraat, Vergesig. Daar is ’n heining voor die gebou. WhatsApp as jy hulp wil hê met parkeer.",
+        s2t: "Stap in", s2p: "Die diens is in Afrikaans. Dra wat jy gemaklik is. Kinders is welkom saam met jou.",
+        s3t: "Bly of gaan", s3p: "Groet iemand ná die tyd as jy wil. Of loop stil-stil uit. Jy is in elk geval welkom terug.",
+        svcKicker: "Wanneer", svcTitle: "Vra eers die tyd. Dan kom ons.",
+        svcLede: "Ou lyste noem Sondag 09:30 en 18:30 in Afrikaans. Google wys soms Woensdag 09:00. Ons sit nie ’n tyd op die web wat dalk verkeerd is nie — stuur ’n WhatsApp, dan sê ons wanneer die volgende diens is.",
         svcBtn: "Vra die tyd op WhatsApp",
+        ytKicker: "YouTube", ytTitle: "Boodskappe om saam te kyk.",
+        ytLede: "Hierdie is werklike preke van ons kanaal, Ags Durbanville Kruisgemeente. Hulle is van 2020 — nie hierdie Sondag se diens nie. Kyk gerus, en kom kuier as jy kan.",
+        ytAll: "Hele kanaal",
         locKicker: "Adres", locTitle: "Hoek van St John- en van Bredastraat",
-        locLede: "St John Road, Vergesig, Durbanville, 7550. Daar is ’n heining voor die gebou. As jy die eerste keer kom, WhatsApp gerus — iemand help jou graag met parkeer.",
-        locMap: "Maak Google Maps oop",
+        locLede: "St John Road, Vergesig, Durbanville, 7550. Aurora / Vergesig. As dit jou eerste keer is, WhatsApp gerus — iemand help jou graag met parkeer.",
+        locAf: "Erediens in Afrikaans", locMap: "Maak Google Maps oop",
         conKicker: "Kontak", conTitle: "Stuur ’n boodskap.",
-        conLede: "Dit gaan na admin@agsdurbanville.co.za. Of WhatsApp dieselfde nommer as die kerkfoon.",
+        conLede: "Dit gaan na admin@agsdurbanville.co.za. Of WhatsApp dieselfde nommer as die kerkfoon. Ons antwoord so gou as ons kan.",
         fName: "Naam", fMsg: "Boodskap", fSend: "Stuur",
         sentOk: "Gestuur. Ons antwoord so gou as ons kan.",
         sentFail: "Kon nie stuur nie. WhatsApp 083 966 8164 of e-pos admin@agsdurbanville.co.za",
-        lang: "English"
+        footLine: "Apostoliese Geloofsending van Suid-Afrika · Vergesig",
+        lang: "English", menu: "Kieslys"
       },
       en: {
-        kicker: "Apostolic Faith Mission",
-        heroTitle: "AGS Kruis Gemeente Durbanville",
-        heroLede: "A Pentecostal church in Vergesig. Come as you are — we will be glad to see you.",
-        ctaVisit: "Visit us",
-        ctaWa: "WhatsApp",
+        navWelcome: "Welcome", navFirst: "First visit", navSvc: "Services",
+        navWatch: "Watch", navHere: "Find us", navContact: "Contact",
+        kicker: "Apostolic Faith Mission · Vergesig",
+        heroTitle: "At the cross. In Durbanville.",
+        heroLede: "A Pentecostal church on the corner of St John and van Breda. Come as you are — we will be glad to see you.",
+        ctaVisit: "Visit us", ctaWa: "Ask the time",
+        verse: "“You will receive power when the Holy Spirit comes on you; and you will be my witnesses.”",
+        verseCite: "Acts 1:8",
         aboutKicker: "Who we are",
-        aboutTitle: "At the cross. In Durbanville.",
-        aboutLede: "We are AGS Kruis Gemeente Durbanville, part of the Apostolic Faith Mission of South Africa. We worship Jesus Christ, read the Bible, and make space for families, children, and anyone who is looking.",
-        c1t: "Sunday", c1p: "Afrikaans service. Call or WhatsApp for the time — it can change.",
+        aboutTitle: "A family at the cross.",
+        aboutLede: "We are AGS Kruis Gemeente Durbanville, part of the Apostolic Faith Mission of South Africa — the country’s first and largest Pentecostal church. We worship Jesus Christ, read the Bible, and make space for families, children, and anyone who is looking.",
+        c1t: "Worship", c1p: "On Sunday we gather in Afrikaans. There is singing, the Word, and room to be still before the Lord.",
         c2t: "All welcome", c2p: "You do not have to be a member. Walk in. Greet someone. Stay as long as you like.",
-        c3t: "Watch along", c3p: "There is a YouTube channel with messages. The office is also on Facebook.",
-        svcKicker: "When", svcTitle: "Ask us for the time first.",
-        svcLede: "Google sometimes shows Wednesday 09:00. Older lists mention Sunday morning and evening. We will not put the wrong time on the site — WhatsApp us and we will tell you when the next service is.",
+        c3t: "The Word", c3p: "We believe the Bible is God’s Word, and that the Holy Spirit still leads, heals, and sends people today.",
+        firstKicker: "Your first Sunday", firstTitle: "Come as you are.",
+        firstLede: "Nobody expects you to know everything. Here is what to expect if it is your first time.",
+        s1t: "Find us", s1p: "Corner of St John and van Breda, Vergesig. There is a fence in front of the building. WhatsApp if you want help with parking.",
+        s2t: "Walk in", s2p: "The service is in Afrikaans. Wear what you are comfortable in. Children are welcome with you.",
+        s3t: "Stay or go", s3p: "Greet someone afterwards if you want. Or slip out quietly. You are welcome back either way.",
+        svcKicker: "When", svcTitle: "Ask for the time first. Then come.",
+        svcLede: "Older lists mention Sunday 09:30 and 18:30 in Afrikaans. Google sometimes shows Wednesday 09:00. We will not put a time on the site that may be wrong — WhatsApp us and we will tell you when the next service is.",
         svcBtn: "Ask the time on WhatsApp",
+        ytKicker: "YouTube", ytTitle: "Messages to watch along.",
+        ytLede: "These are real sermons from our channel, Ags Durbanville Kruisgemeente. They are from 2020 — not this Sunday’s service. Watch, and visit if you can.",
+        ytAll: "Full channel",
         locKicker: "Address", locTitle: "Corner of St John and van Breda",
-        locLede: "St John Road, Vergesig, Durbanville, 7550. There is a fence in front of the building. If it is your first visit, WhatsApp — someone will help you with parking.",
-        locMap: "Open Google Maps",
+        locLede: "St John Road, Vergesig, Durbanville, 7550. Aurora / Vergesig. If it is your first visit, WhatsApp — someone will help you with parking.",
+        locAf: "Service in Afrikaans", locMap: "Open Google Maps",
         conKicker: "Contact", conTitle: "Send a note.",
-        conLede: "It goes to admin@agsdurbanville.co.za. Or WhatsApp the same number as the church phone.",
+        conLede: "It goes to admin@agsdurbanville.co.za. Or WhatsApp the same number as the church phone. We will reply as soon as we can.",
         fName: "Name", fMsg: "Message", fSend: "Send",
         sentOk: "Sent. We will reply as soon as we can.",
         sentFail: "Could not send. WhatsApp 083 966 8164 or email admin@agsdurbanville.co.za",
-        lang: "Afrikaans"
+        footLine: "Apostolic Faith Mission of South Africa · Vergesig",
+        lang: "Afrikaans", menu: "Menu"
       }
     };
     let lang = "af";
@@ -193,12 +359,29 @@
         } else el.textContent = t[k];
       });
       document.querySelectorAll("[data-lang]").forEach((b) => { b.textContent = t.lang; });
+      const menu = document.getElementById("menuBtn");
+      if (menu) menu.textContent = t.menu;
     }
     document.querySelectorAll("[data-lang]").forEach((b) => {
       b.addEventListener("click", () => { lang = lang === "af" ? "en" : "af"; applyLang(); });
     });
-    document.getElementById("menuBtn").addEventListener("click", () => {
-      document.getElementById("mobileMenu").classList.toggle("open");
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      const open = mobileMenu.hasAttribute("hidden") === false;
+      if (open) {
+        mobileMenu.setAttribute("hidden", "");
+        menuBtn.setAttribute("aria-expanded", "false");
+      } else {
+        mobileMenu.removeAttribute("hidden");
+        menuBtn.setAttribute("aria-expanded", "true");
+      }
+    });
+    mobileMenu.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        mobileMenu.setAttribute("hidden", "");
+        menuBtn.setAttribute("aria-expanded", "false");
+      });
     });
     document.getElementById("form").addEventListener("submit", async (e) => {
       e.preventDefault();
