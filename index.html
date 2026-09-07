@@ -64,6 +64,14 @@
     <button type="button" data-go="8">IX. <span data-i18n="pWrite">Skryf</span></button>
   </nav>
 
+  <div class="intro" id="intro" hidden>
+    <svg class="cross-draw" viewBox="0 0 100 160" aria-hidden="true">
+      <line x1="50" y1="8" x2="50" y2="152" />
+      <line x1="16" y1="46" x2="84" y2="46" />
+    </svg>
+    <p data-i18n="coverSub">Jesus Christus, gekruisig en opgestaan</p>
+  </div>
+
   <div class="stage">
     <canvas id="dust"></canvas>
     <div class="glow"></div>
@@ -80,7 +88,6 @@
           <p class="cover-meta">Sondag 09:00 · Afrikaans · Vergesig</p>
           <button class="btn btn-gold" type="button" id="openBtn" data-i18n="openBtn">Maak die boek oop</button>
         </div>
-        <span class="hint" aria-hidden="true"></span>
       </section>
 
       <section class="leaf spread" data-leaf="1" id="woord">
@@ -354,17 +361,49 @@
     }
 
     const leaves = [...document.querySelectorAll(".leaf")];
-    function go(n) {
-      page = Math.max(0, Math.min(PAGES - 1, n));
-      leaves.forEach((el, i) => {
-        el.classList.toggle("flipped", i < page);
-        el.style.zIndex = String(i < page ? i : PAGES - i);
-        el.setAttribute("aria-hidden", i === page ? "false" : "true");
-      });
-      drawPager();
+    let turning = false;
+    function go(n, instant) {
+      n = Math.max(0, Math.min(PAGES - 1, n));
+      if (n === page && leaves[page].classList.contains("on")) return;
+      if (turning) return;
       toc.setAttribute("hidden", "");
-      const leaf = leaves[page];
-      if (leaf) leaf.scrollTop = 0;
+      const from = leaves[page];
+      const to = leaves[n];
+      if (instant || !from.classList.contains("on")) {
+        leaves.forEach((el) => el.classList.remove("on", "leave", "enter"));
+        to.classList.add("on");
+        page = n;
+        drawPager();
+        return;
+      }
+      turning = true;
+      const forward = n > page;
+      from.classList.add("leave");
+      from.classList.toggle("back", !forward);
+      to.classList.add("on", "enter");
+      to.classList.toggle("back", !forward);
+      to.scrollTop = 0;
+      setTimeout(() => {
+        from.classList.remove("on", "leave", "back");
+        to.classList.remove("enter", "back");
+        page = n;
+        turning = false;
+        drawPager();
+      }, 560);
+    }
+
+    function openBook() {
+      const intro = document.getElementById("intro");
+      intro.removeAttribute("hidden");
+      requestAnimationFrame(() => intro.classList.add("play"));
+      setTimeout(() => {
+        intro.classList.add("out");
+        go(1, true);
+        setTimeout(() => {
+          intro.setAttribute("hidden", "");
+          intro.classList.remove("play", "out");
+        }, 500);
+      }, 2200);
     }
 
     (function dust() {
@@ -406,7 +445,7 @@
       document.getElementById("next").disabled = page === PAGES - 1;
     }
 
-    document.getElementById("openBtn").addEventListener("click", () => go(1));
+    document.getElementById("openBtn").addEventListener("click", openBook);
     document.getElementById("prev").addEventListener("click", () => go(page - 1));
     document.getElementById("next").addEventListener("click", () => go(page + 1));
     document.getElementById("tocBtn").addEventListener("click", () => {
